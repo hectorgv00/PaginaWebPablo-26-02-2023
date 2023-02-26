@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener, Input, SimpleChanges } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { DashboardComponent } from 'src/app/Dashboard/Dashboard/Dashboard.component';
 
@@ -29,6 +30,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     private elementRef: ElementRef,
     private activatedRoute: ActivatedRoute,
+    private title:Title
   ) {}
 
   ngOnInit() {
@@ -47,6 +49,7 @@ export class HeaderComponent implements OnInit {
     if(this.anchoPantalla >850){this.getHeaderOption(); console.log('eyeyey')}
   }
   getHeaderOption() {
+    this.title.setTitle(this.activatedRoute.snapshot.data['title'])
     this.headerOption = this.activatedRoute.snapshot.data['header'];
     let element = document.querySelectorAll('.elementHeader');
     switch (this.headerOption) {

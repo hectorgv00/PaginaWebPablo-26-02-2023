@@ -84,5 +84,14 @@
   .textoDashboard{
     width: 100%;
   }
+
+  .topBlock{
+    flex-wrap: wrap;
+  }
+
+  .imagenTopBlock{
+    max-width: 100%;
+    max-height: 100%;
+  }
   
 }
