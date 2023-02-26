@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './Dashboard/Dashboard/Dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { HeaderComponent } from './Shared/Components/Header/Header.component';
 
 @NgModule({
   declarations: [
     AppComponent, 
     DashboardComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

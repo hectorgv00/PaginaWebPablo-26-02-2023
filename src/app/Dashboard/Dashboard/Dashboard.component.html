@@ -9,10 +9,10 @@
     <div class="topBlock">
       <div class="textoTopBlock">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lacinia sapien. Maecenas viverra scelerisque arcu a ullamcorper. Donec tempus massa orci, eu efficitur tortor molestie sit amet. Nulla sodales, leo nec bibendum vulputate, orci purus maximus ipsum, at vulputate nisl ante sollicitudin felis. Cras interdum enim in mattis tempus. Curabitur accumsan lacinia augue eget pharetra. Morbi ut odio consequat, tempor purus non, mollis turpis. Sed accumsan diam ac neque posuere volutpat.
-
+          
           Morbi vitae dui sollicitudin, porttitor nisl id, ornare eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, tortor quis dictum interdum, lectus nibh fermentum mauris, sed malesuada risus nisl et neque. Aliquam ornare arcu eget magna tincidunt scelerisque. In pellentesque neque elit, non maximus orci tempor in. In eget risus leo. Maecenas sed auctor sem.
           
-          </p>
+        </p>
       </div>
       <div class="imagenTopBlock">
         <img class="imagen" src="/assets/Images/pexels-ylanite-koppens-796602.jpg" alt="imagen">
@@ -22,43 +22,20 @@
   
   
   
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <!-- Header -->
-
-  <div class="header">
-    <div class="iconoYNombre" [ngClass]="{'opacity0': !textoFlag}">
-      <img class="imagenHeader" src="/assets/Icon/iconoPS.png" alt="logo">
-      <p class="labelHeaderNombre">PABLO SIERRA VALVERDE</p>
-    </div>
-    <!-- Elementos Hamburguesa -->
-    <div class="elementos" *ngIf="!hamburguesa" (click)="flagHamburguesaOpen()">
-      <div class="elementosHamburguesaContainer" *ngIf="hamburguesaOpen">
-        <div class="elementHeaderHamburguesa" id="{{index}}" *ngFor="let element of HeaderElements; let index = index" (click)="menuClicked(element.path)">
-          <span class="icono"><ng-container><mat-icon>{{element.icon}}</mat-icon></ng-container></span>
-          <p class="labelHeader">{{element.label}}</p>
-        </div>
-      </div>
-
-      <span class="icono"><ng-container><mat-icon>menu</mat-icon></ng-container></span>
-    </div>
-    <!-- Elementos No hamburguesa -->
-    <div class="elementos" *ngIf="hamburguesa">
-      <div class="elementHeader" id="{{index}}" *ngFor="let element of HeaderElements; let index = index">
-        <span class="icono"><ng-container><mat-icon>{{element.icon}}</mat-icon></ng-container></span>
-        <p class="labelHeader">{{element.label}}</p>
-      </div>
-    </div>
-  </div>
-
+  
+  <Header [textoFlag]="textoFlag"></Header>
+  
   <!-- Header ends -->
 </div>

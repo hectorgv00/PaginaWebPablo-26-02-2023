@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener, Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,6 +6,11 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './Dashboard.component.html',
   styleUrls: ['./Dashboard.component.css']
 })
+
+@Injectable({
+  providedIn: 'root'
+})
+
 export class DashboardComponent implements OnInit {
 
   @HostListener('window:resize')onWindowResize(){
