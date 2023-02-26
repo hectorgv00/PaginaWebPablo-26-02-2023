@@ -8,10 +8,10 @@
 }
 
 .bgImage1 {
-  background-image: url("/assets/Images/SlidersDashboard/Family-Bankers-Office-Valencia-scaled.jpeg");
+  background-image: url("./assets/Images/SlidersDashboard/Family-Bankers-Office-Valencia-scaled.jpeg");
 }
 .bgImage2 {
-  background-image: url("/assets/Images/SlidersDashboard/pexels-ylanite-koppens-796602.jpg");
+  background-image: url("./assets/Images/pexels-ylanite-koppens-796602.jpg");
 }
 
 .header {
