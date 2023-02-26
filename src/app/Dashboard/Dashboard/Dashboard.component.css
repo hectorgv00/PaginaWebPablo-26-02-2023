@@ -1,0 +1,64 @@
+.FullPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+}
+
+.firstView {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/Images/Family-Bankers-Office-Valencia-scaled.jpeg");
+  background-position: center;
+  background-size: cover;
+  filter: invert(0) sepia(1) hue-rotate(-161deg) saturate(10);
+  background-attachment: fixed;
+}
+
+.textoDashboard {
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  height: 30vh;
+  width: 60vw;
+  background: rgba(88, 17, 255, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  transition: all .4s linear;
+  
+}
+
+.opacity0{
+    opacity: 0;
+    transition: all .4s linear;
+}
+
+
+
+.textoDashboardTop {
+  font-size: 4vw;
+}
+.textoDashboardBottom {
+  font-size: 3vw;
+}
+
+
+@media (max-width:850px){
+  .textoDashboardTop {
+    font-size: 7vw;
+  }
+  .textoDashboardBottom {
+    font-size: 6vw;
+  }
+
+  .textoDashboard{
+    width: 100%;
+  }
+  
+}

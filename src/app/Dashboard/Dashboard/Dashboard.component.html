@@ -1,0 +1,53 @@
+<div class="FullPage">
+  <div class="firstView">
+    <div (window:scroll)="detectarTextoTop()" class="textoDashboard" [ngClass]="{'opacity0': textoFlag}">
+      <h1 class="textoDashboardTop" >PABLO SIERRA VALVERDE</h1>
+      <h3 class="textoDashboardBottom">Asesor financiero</h3>
+    </div>
+  </div>
+  <div class="secondView">
+    
+  </div>
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Header -->
+
+  <div class="header">
+    <div class="iconoYNombre" [ngClass]="{'opacity0': !textoFlag}">
+      <img class="imagenHeader" src="/assets/Icon/iconoPS.png" alt="logo">
+      <p class="labelHeaderNombre">PABLO SIERRA VALVERDE</p>
+    </div>
+    <!-- Elementos Hamburguesa -->
+    <div class="elementos" *ngIf="!hamburguesa" (click)="flagHamburguesaOpen()">
+      <div class="elementosHamburguesaContainer" *ngIf="hamburguesaOpen">
+        <div class="elementHeaderHamburguesa" id="{{index}}" *ngFor="let element of HeaderElements; let index = index" (click)="menuClicked(element.path)">
+          <span class="icono"><ng-container><mat-icon>{{element.icon}}</mat-icon></ng-container></span>
+          <p class="labelHeader">{{element.label}}</p>
+        </div>
+      </div>
+
+      <span class="icono"><ng-container><mat-icon>menu</mat-icon></ng-container></span>
+    </div>
+    <!-- Elementos No hamburguesa -->
+    <div class="elementos" *ngIf="hamburguesa">
+      <div class="elementHeader" id="{{index}}" *ngFor="let element of HeaderElements; let index = index">
+        <span class="icono"><ng-container><mat-icon>{{element.icon}}</mat-icon></ng-container></span>
+        <p class="labelHeader">{{element.label}}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header ends -->
+</div>

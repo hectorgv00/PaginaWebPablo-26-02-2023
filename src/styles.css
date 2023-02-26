@@ -1,1 +1,134 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.bgImage1 {
+  background-image: url("/assets/Images/SlidersDashboard/Family-Bankers-Office-Valencia-scaled.jpeg");
+}
+.bgImage2 {
+  background-image: url("/assets/Images/SlidersDashboard/pexels-ylanite-koppens-796602.jpg");
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  position: fixed;
+  height: 10vh;
+  padding: 0 1em;
+}
+
+.imagenHeader {
+  height: 2em;
+  width: 2em;
+}
+
+.elementos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  height: 100%;
+  position: relative;
+}
+
+.iconoYNombre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  transition: all 0.4s linear;
+  gap: 1em;
+}
+
+.elementHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  transition: all 0.4s linear;
+  height: 100%;
+  padding: 0 1em;
+}
+
+.elementHeaderHamburguesa {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  gap: 1em;
+  transition: all 0.4s linear;
+  height: fit-content;
+  padding: 0 1em;
+  top: 1px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding: 1em 0;
+
+}
+
+.elementHeaderHamburguesa:last-child{
+  border-bottom: none;
+
+}
+
+.elementosHamburguesaContainer {
+  transition: all 0.4s linear;
+  position: absolute;
+  height: fit-content;
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  gap: 1em;
+  width: 15em;
+  background-color: #fff;
+  top: 110px;
+  left: -180px;
+  padding: 1em;
+}
+.elementosHamburguesaContainer::before{
+  position: absolute;
+  content: "";
+  width: 1em;
+  height: 1em;
+  transform: rotate(45deg);
+  background-color: #fff;
+  top: -5px;
+  left: 185px;
+
+}
+
+.elementHeader:hover {
+  transition: all 0.4s linear;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+}
+
+.labelHeader {
+  margin: 0 !important;
+}
+
+.labelHeaderNombre {
+  margin: 0 !important;
+  font-size: 2em;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
