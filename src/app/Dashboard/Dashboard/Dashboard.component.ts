@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-Dashboard',
@@ -11,6 +12,7 @@ export class DashboardComponent implements OnInit {
     this.getScreenWidth()
   }
 
+  headerOption!:string
   textoFlag:boolean = false
   hamburguesa:boolean = false
   hamburguesaOpen:boolean = false
@@ -24,11 +26,41 @@ export class DashboardComponent implements OnInit {
   ]
 
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
     this.getScreenWidth()
+    
+  }
+  
+  ngAfterViewInit(){
+    this.getHeaderOption()
 
+  }
+  getHeaderOption(){
+    this.headerOption = this.activatedRoute.snapshot.data['header']
+    let element = document.querySelectorAll('.elementHeader')
+    switch (this.headerOption) {
+      case 'home':
+          element[0].classList.add('elementHeaderActive')
+        break;
+      case 'servicios':
+          element[1].classList.add('elementHeaderActive')
+        break;
+      case 'sobreMi':
+          element[2].classList.add('elementHeaderActive')
+        break;
+      case 'casosDeExito':
+          element[3].classList.add('elementHeaderActive')
+        break;
+      case 'contacto':
+          element[4].classList.add('elementHeaderActive')
+        break;
+    
+      default:
+        break;
+    }
+    console.log(element)
   }
 
   getScreenWidth(){

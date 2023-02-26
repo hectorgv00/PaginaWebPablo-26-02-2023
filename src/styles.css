@@ -59,6 +59,8 @@
   transition: all 0.4s linear;
   height: 100%;
   padding: 0 1em;
+  width: fit-content;
+  position: relative;
 }
 
 .elementHeaderHamburguesa {
@@ -73,12 +75,10 @@
   width: 100%;
   border-bottom: 1px solid black;
   padding: 1em 0;
-
 }
 
-.elementHeaderHamburguesa:last-child{
+.elementHeaderHamburguesa:last-child {
   border-bottom: none;
-
 }
 
 .elementosHamburguesaContainer {
@@ -95,7 +95,7 @@
   left: -180px;
   padding: 1em;
 }
-.elementosHamburguesaContainer::before{
+.elementosHamburguesaContainer::before {
   position: absolute;
   content: "";
   width: 1em;
@@ -104,7 +104,6 @@
   background-color: #fff;
   top: -5px;
   left: 185px;
-
 }
 
 .elementHeader:hover {
@@ -114,6 +113,24 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(7.9px);
   -webkit-backdrop-filter: blur(7.9px);
+}
+
+.elementHeaderActive {
+  transition: all 0.4s linear;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  transition: all 0.4s linear;
+  height: 100%;
+  padding: 0 1em;
+  width: fit-content;
+  position: relative;
 }
 
 .labelHeader {
