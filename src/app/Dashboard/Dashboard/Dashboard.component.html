@@ -1,38 +1,76 @@
 <div class="FullPage">
   <div class="firstView">
-    <div (window:scroll)="detectarTextoTop()" class="textoDashboard" [ngClass]="{'opacity0': textoFlag}">
-      <h1 class="textoDashboardTop" >PABLO SIERRA VALVERDE</h1>
+    <div
+      (window:scroll)="detectarTextoTop()"
+      class="textoDashboard"
+      [ngClass]="{ opacity0: textoFlag }"
+    >
+      <h1 class="textoDashboardTop">PABLO SIERRA VALVERDE</h1>
       <h3 class="textoDashboardBottom">Asesor financiero</h3>
     </div>
   </div>
   <div class="secondView">
-    <div class="topBlock">
-      <div class="textoTopBlock">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rhoncus lacinia sapien. Maecenas viverra scelerisque arcu a ullamcorper. Donec tempus massa orci, eu efficitur tortor molestie sit amet. Nulla sodales, leo nec bibendum vulputate, orci purus maximus ipsum, at vulputate nisl ante sollicitudin felis. Cras interdum enim in mattis tempus. Curabitur accumsan lacinia augue eget pharetra. Morbi ut odio consequat, tempor purus non, mollis turpis. Sed accumsan diam ac neque posuere volutpat.
-          
-          Morbi vitae dui sollicitudin, porttitor nisl id, ornare eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt, tortor quis dictum interdum, lectus nibh fermentum mauris, sed malesuada risus nisl et neque. Aliquam ornare arcu eget magna tincidunt scelerisque. In pellentesque neque elit, non maximus orci tempor in. In eget risus leo. Maecenas sed auctor sem.
-          
+    <div class="question">
+      <p>¿Lorem ipsum tal y tal?</p>
+    </div>
+    <div class="columns">
+      <div class="iconText">
+        <span class="bubbleIcon">
+        <ng-container >
+          <mat-icon class="mainIcon">
+            home
+          </mat-icon>
+        </ng-container>
+
+        <ng-container>
+          <mat-icon class="flare1">
+            flare
+          </mat-icon>
+          <mat-icon class="flare2">
+            flare
+          </mat-icon>
+        </ng-container>
+        </span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur,
+          modi officia maxime quas totam tempora asperiores saepe eum
+          dignissimos, molestias veniam, quibusdam dolore reiciendis veritatis
+          ipsam blanditiis. Est, eius laboriosam?
         </p>
       </div>
-      <div class="imagenTopBlock">
-        <img class="imagen" src="../../../assets/Images/pexels-ylanite-koppens-796602.jpg" alt="imagen">
+      <div class="iconText">
+        <span class="bubbleIcon">
+          <ng-container >
+            <mat-icon>
+              person
+            </mat-icon>
+          </ng-container>
+        </span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur,
+          modi officia maxime quas totam tempora asperiores saepe eum
+          dignissimos, molestias veniam, quibusdam dolore reiciendis veritatis
+          ipsam blanditiis. Est, eius laboriosam?
+        </p>
+      </div>
+      <div class="iconText">
+        <span class="bubbleIcon">
+          <ng-container >
+            <mat-icon>
+              home
+            </mat-icon>
+          </ng-container>
+        </span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur,
+          modi officia maxime quas totam tempora asperiores saepe eum
+          dignissimos, molestias veniam, quibusdam dolore reiciendis veritatis
+          ipsam blanditiis. Est, eius laboriosam?
+        </p>
       </div>
     </div>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   <!-- Header -->
   <Header [textoFlag]="textoFlag"></Header>
   <!-- Header ends -->
